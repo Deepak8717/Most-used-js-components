@@ -33,8 +33,8 @@ document.addEventListener("keydown", (e) => {
   result.innerHTML = ul.getElementsByTagName("li")[index].textContent;
 });
 
-//if user click on item
-document.addEventListener("click", (e) => {
+//if user click on list
+ul.addEventListener("click", (e) => {
   for (let i = 0; i < ul.getElementsByTagName("li").length; i++) {
     ul.getElementsByTagName("li")[i].classList.remove("selected");
   }
