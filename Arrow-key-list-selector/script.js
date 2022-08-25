@@ -3,7 +3,6 @@ const result = document.getElementById("result");
 let liSelected;
 let index = -1;
 let prevIndex;
-let nextIndex;
 document.addEventListener("keydown", (e) => {
   const len = ul.getElementsByTagName("li").length;
 
@@ -23,12 +22,12 @@ document.addEventListener("keydown", (e) => {
   //upkey
   else if (e.which === 38) {
     index--;
-    nextIndex = index + 1;
+    prevIndex = index + 1;
     if (index < 0) {
       index = len - 1;
     }
     ul.getElementsByTagName("li")[index].classList.add("selected");
-    ul.getElementsByTagName("li")[nextIndex].classList.remove("selected");
+    ul.getElementsByTagName("li")[prevIndex].classList.remove("selected");
   }
 
   //Enter key

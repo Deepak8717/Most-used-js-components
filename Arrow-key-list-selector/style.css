@@ -4,3 +4,7 @@ li.selected {
 li:hover {
   background: yellow;
 }
+#result {
+  font-weight: bold;
+  font-size: 40px;
+}
