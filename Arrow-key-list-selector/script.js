@@ -30,6 +30,14 @@ document.addEventListener("keydown", (e) => {
     ul.getElementsByTagName("li")[index].classList.add("selected");
     ul.getElementsByTagName("li")[nextIndex].classList.remove("selected");
   }
+
+  //Enter key
+  else if (e.key === "Enter") {
+    for (let i = 0; i < ul.getElementsByTagName("li").length; i++) {
+      ul.getElementsByTagName("li")[i].classList.remove("selected");
+    }
+    ul.getElementsByTagName("li")[index].classList.add("selected");
+  }
   result.innerHTML = ul.getElementsByTagName("li")[index].textContent;
 });
 
